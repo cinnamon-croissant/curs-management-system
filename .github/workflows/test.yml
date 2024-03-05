@@ -23,3 +23,4 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: cinnamon-croissant/curs-management-system
+          distribution: 'Ubuntu'
