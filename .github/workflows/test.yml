@@ -1,0 +1,20 @@
+name: Upload Coverage Reports
+
+on:
+  workflow_dispatch:
+
+jobs:
+  upload-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Add your build and test steps here
+      # ...
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: cinnamon-croissant/curs-management-system
